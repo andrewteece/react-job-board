@@ -1,12 +1,13 @@
-import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HomeCards from './components/HomeCards';
 
 const App = () => {
   return (
     <>
       <Navbar />
       <Hero />
-
+      <HomeCards />
       {/*  Developers and Employers */}
       <section className='py-4'>
         <div className='container-xl lg:container m-auto'>
