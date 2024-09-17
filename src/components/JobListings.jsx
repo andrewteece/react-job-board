@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import JobListing from './JobListing';
 import jobs from '../jobs.json';
 
-const JobListings = () => {
-  const recentJobs = jobs.slice(0, 3);
+const JobListings = ({ isHome = false }) => {
+  const joblistings = isHome ? jobs.slice(0, 3) : jobs;
 
   return (
     <section className='bg-blue-50 px-4 py-10'>
@@ -13,7 +13,7 @@ const JobListings = () => {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='bg-white rounded-xl shadow-md relative'>
-            {recentJobs.map((job) => (
+            {joblistings.map((job) => (
               <JobListing key={job.id} job={job} />
             ))}
           </div>
