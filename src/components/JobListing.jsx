@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { useState } from 'react';
 import { FaMapMarker } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -10,6 +12,7 @@ const JobListing = ({ job }) => {
   if (!showFullDescription) {
     description = description.substring(0, 90) + '...';
   }
+
   return (
     <div className='bg-white rounded-xl shadow-md relative'>
       <div className='p-4'>
@@ -37,7 +40,7 @@ const JobListing = ({ job }) => {
             {job.location}
           </div>
           <Link
-            to={`/job/${job.id}`}
+            to={`/jobs/${job.id}`}
             className='h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm'
           >
             Read More
@@ -47,5 +50,4 @@ const JobListing = ({ job }) => {
     </div>
   );
 };
-
 export default JobListing;

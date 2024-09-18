@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { useState, useEffect } from 'react';
 import JobListing from './JobListing';
 import Spinner from './Spinner';
@@ -12,6 +14,7 @@ const JobListings = ({ isHome = false }) => {
       try {
         const res = await fetch(apiUrl);
         const data = await res.json();
+        setJobs(data);
       } catch (error) {
         console.log('Error fetching data', error);
       } finally {
@@ -42,5 +45,4 @@ const JobListings = ({ isHome = false }) => {
     </section>
   );
 };
-
 export default JobListings;

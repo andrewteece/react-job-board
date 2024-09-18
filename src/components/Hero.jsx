@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 const Hero = ({
   title = 'Become a React Dev',
   subtitle = 'Find the React job that fits your skiill set',
