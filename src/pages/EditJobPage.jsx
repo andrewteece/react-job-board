@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 import { useState } from 'react';
 import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
